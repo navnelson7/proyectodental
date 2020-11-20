@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './components/Home';
+import CardsPacientes from './components/Pacientes/CardsPacientes';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Router>
         <NavbarDesktop />
         <Switch>
+        <Route path="/pacientes">
+           <CardsPacientes/>
+          </Route>
           <Route path="/">
            <Home/>
           </Route>

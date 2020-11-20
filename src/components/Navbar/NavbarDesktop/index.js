@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
+import { useLocation, Link } from "react-router-dom";
 
 function NavbarDesktop() {
+    let { pathname } = useLocation();
+
     return (
         <Fragment>
             <StyleNavbarDesktop>
@@ -10,26 +13,30 @@ function NavbarDesktop() {
                 <div className="wrapper-left">
                     <div className="sidebar-left">
                         <br />
-                        <div className="grid-sidebar bg-active" style={{ marginTop: '12px' }}>
-                            <div className="icon-sidebar-align">
-                                <span className="material-icons">
-                                    home
+                        <Link to="/">
+                            <div className={`grid-sidebar ${pathname === "/" ? "bg-active" : "bg-no-active"}`} style={{ marginTop: '12px' }}>
+                                <div className="icon-sidebar-align">
+                                    <span className="material-icons">
+                                        home
                                 </span>
+                                </div>
+                                <div>
+                                    <p style={{ marginTop: '4px' }}>Inicio</p>
+                                </div>
                             </div>
-                            <div>
-                                <p style={{ marginTop: '4px' }}>Inicio</p>
-                            </div>
-                        </div>
-                        <div className="grid-sidebar bg-no-active">
-                            <div className="icon-sidebar-align">
-                                <span className="material-icons">
-                                groups
+                        </Link>
+                        <Link to="/pacientes">
+                            <div className={`grid-sidebar ${pathname === "/pacientes" ? "bg-active" : "bg-no-active"}`}>
+                                <div className="icon-sidebar-align">
+                                    <span className="material-icons">
+                                        groups
                                 </span>
+                                </div>
+                                <div>
+                                    <p style={{ marginTop: '4px' }}>Pacientes</p>
+                                </div>
                             </div>
-                            <div>
-                                <p style={{ marginTop: '4px' }}>Pacientes</p>
-                            </div>
-                        </div>
+                        </Link>
                         <div className="grid-sidebar bg-no-active">
                             <div className="icon-sidebar-align">
                                 <span className="material-icons">
@@ -111,6 +118,7 @@ const StyleNavbarDesktop = styled.div`
 
 .bg-no-active {
     transition: 0.5s;
+    color: black;
 }
 
 .bg-no-active:hover {
