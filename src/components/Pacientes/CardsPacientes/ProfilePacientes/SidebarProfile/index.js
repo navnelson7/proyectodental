@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";;
 
 function SidebarProfile() {
-
     return (
         <StyleSidebarProfile>
             <div className="wrapper-left">
@@ -19,10 +18,10 @@ function SidebarProfile() {
                     <div className="center">
                         <p>Sonsonate, sonzacate, El Sauce</p>
                     </div>
-                    <br/>
+                    <br />
                     <div className="center">
                         <p>
-                            <span class="material-icons padding-cellphone">
+                            <span className="material-icons padding-cellphone">
                                 phone
                             </span>
                         </p>
@@ -38,13 +37,14 @@ export default SidebarProfile;
 
 const StyleSidebarProfile = styled.div`
   .wrapper-left {
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
+    position: fixed;
+    top: 0; /* Stay at the top */
+    left: 1;
+    right: 0;
   }
   .wrapper-left .sidebar-left {
-    position: fixed;
     width: 250px;
+    min-height: 100vh;
     height: 100%;
     background-color: white;
   }

@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
+import CardsHistorial from './CardsHistorial';
 import SidebarProfile from "./SidebarProfile";
 
 function ProfilePacientes() {
     return (
         <Fragment>
-            <p align="center">Hola perfil de pacientes</p>
+            <CardsHistorial />
             <SidebarProfile />
         </Fragment>
     )
