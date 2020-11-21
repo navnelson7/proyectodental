@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import CardsPacientes from './components/Pacientes/CardsPacientes';
+import ProfilePacientes from './components/Pacientes/CardsPacientes/ProfilePacientes';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Router>
         <NavbarDesktop />
         <Switch>
+        <Route path="/paciente/:id">
+           <ProfilePacientes/>
+          </Route>
         <Route path="/pacientes">
            <CardsPacientes/>
           </Route>

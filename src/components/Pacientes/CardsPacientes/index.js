@@ -105,7 +105,7 @@ function CardsPacientes() {
                                 </div>
                                 <div>
                                     <p className="title-name-card"><strong>Nelson Hernandez</strong></p>
-                                    <p>Sonsonate</p>
+                                    <p>Sonsonate, sonzacate, El Sauce</p>
                                 </div>
                             </div>
                             <div class="grid-body-card">
@@ -125,7 +125,7 @@ function CardsPacientes() {
                             </div>
                         </div>
 
-                        
+
 
                     </div>
                 </div>
