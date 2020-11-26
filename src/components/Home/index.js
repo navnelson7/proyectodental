@@ -1,8 +1,9 @@
 import React from 'react'
+import CardsPacientes from './CardsPacientes'
 
 function Home() {
     return (
-        <p align="center">Hello!</p>
+        <CardsPacientes/>
     )
 }
 

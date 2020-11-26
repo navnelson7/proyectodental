@@ -111,7 +111,7 @@ const StyleNavbarDesktop = styled.div`
 }
 
 .bg-active {
-    background-color: #5D4CA0;
+    background-color: #8338EC;
     font-weight: bold;
     color: white;
 }
