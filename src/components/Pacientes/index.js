@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import TablaPacientes from "./TablaPacientes";
 import backgroundImage from "./background.webp";
+import { Link } from "react-router-dom";
 
 function Pacientes() {
   return (
@@ -15,9 +16,11 @@ function Pacientes() {
             <div>
               <ul>
                 <li>
-                  <button className="btn-opcion bg-guardar">
-                    <strong>Nuevo Paciente</strong>
-                  </button>
+                  <Link to="/nuevo-paciente">
+                    <button className="btn-opcion bg-guardar">
+                      <strong>Nuevo Paciente</strong>
+                    </button>
+                  </Link>
                 </li>
               </ul>
             </div>

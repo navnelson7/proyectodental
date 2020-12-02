@@ -12,3 +12,8 @@ body {
     font-size: 14px;
     color: rgb(0, 0, 0);
 }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

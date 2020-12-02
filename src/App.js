@@ -1,6 +1,7 @@
 import React, { Fragment, lazy, Suspense } from "react";
 import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import RegistroPacientes from "./components/Pacientes/Registro";
 
 // IMPORTS LAZY
 const Home = lazy(() => import("./components/Home"));
@@ -15,6 +16,9 @@ function App() {
       <Router>
         <NavbarDesktop />
         <Switch>
+          <Route path="/nuevo-paciente">
+            <RegistroPacientes />
+          </Route>
           <Route path="/paciente/:id">
             <Suspense fallback={<p>Cargando...</p>}>
               <ProfilePacientes />
