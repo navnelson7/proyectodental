@@ -26,7 +26,7 @@ function NavbarDesktop() {
                             </div>
                         </Link>
                         <Link to="/pacientes">
-                            <div className={`grid-sidebar ${pathname === "/pacientes" ? "bg-active" : "bg-no-active"}`}>
+                            <div className={`grid-sidebar ${pathname === "/pacientes" || pathname === "/nuevo-paciente" ? "bg-active" : "bg-no-active"}`}>
                                 <div className="icon-sidebar-align">
                                     <span className="material-icons">
                                         groups

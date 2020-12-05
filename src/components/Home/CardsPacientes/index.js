@@ -204,6 +204,7 @@ const StyleCards = styled.div`
       height: 200px;
       background-color: white;
       padding: 10px;
+      margin-bottom: 10px;
     }
     .img-profile-card {
       height: 80px;
@@ -229,6 +230,8 @@ const StyleCards = styled.div`
       -moz-box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
       box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
       padding: 10px;
+      margin-bottom: 10px;
+
     }
     .img-profile-card {
       height: 80px;
@@ -239,7 +242,33 @@ const StyleCards = styled.div`
   /* DESKTOP */
   @media (min-width: 1025px) {
     .container-cards {
-      margin-left: 19%;
+      margin-left: 20%;
+    }
+    .grid-cards {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+    .card-youtube {
+      width: 250px;
+      height: auto;
+      background-color: white;
+      -webkit-box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
+      -moz-box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
+      box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .img-profile-card {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  /* DESKTOP */
+  @media (min-width: 1920px) {
+    .container-cards {
+      margin-left: 17%;
     }
     .grid-cards {
       display: grid;
@@ -253,6 +282,7 @@ const StyleCards = styled.div`
       -moz-box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
       box-shadow: 0px 3px 5px -1px rgba(204, 174, 204, 1);
       padding: 10px;
+      margin-bottom: 10px;
     }
     .img-profile-card {
       height: 80px;

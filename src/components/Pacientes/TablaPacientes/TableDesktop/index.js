@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import SearchTable from "../SearchTable";
+import { useSubscription } from "@apollo/client";
+import { listenPacientes } from "../../../../graphql/Suscriptions";
+
 
 function TableDesktop() {
+  const [PaginateNumber, setPaginateNumber] = useState(0);
+  const [PaginacionPantalla, setPaginacionPantalla] = useState(0);
+  // GET DATA FROM TABLE
+  const { loading, error, data } = useSubscription(listenPacientes, {
+    variables: { limit: 20, offset: PaginateNumber },
+  });
+  if (loading) return <p align="center">Loading....</p>
+  console.log(data);
+  console.log(error);
   return (
     <div>
       <StyleTablePacientes>
@@ -111,7 +123,7 @@ function TableDesktop() {
               </div>
 
             </div>
-            
+
           </div>
         </div>
       </StyleTablePacientes>
